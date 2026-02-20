@@ -9,8 +9,6 @@
 }
 
 body {
-    padding-top: 100px; /* supaya hero tidak ketutup */
-}
     font-family: 'Segoe UI', sans-serif;
     color: #ffffff;
     line-height: 1.6;
@@ -51,7 +49,6 @@ body::after {
     background: #1f3c88; /* biru dongker glow */
     bottom: -150px;
     right: -150px;
-}
 }
 
 /* ===============================
