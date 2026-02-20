@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pendaftaran Anggota</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
 
+        .container {
+            background: white;
+            width: 400px;
+            margin: 80px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            width: 95%;
+            padding: 10px;
+            background-color: silver;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .success {
+            margin-top: 15px;
+            color: green;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Form Pendaftaran Anggota</h2>
+
+    <form id="formDaftar">
+        <input type="text" id="firstName" placeholder="First Name" required>
+        <input type="text" id="lastName" placeholder="Last Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="phone" placeholder="No Handphone" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="success" id="successMessage">
+        DAFTAR
+    </div>
+</div>
+
+<script>
+document.getElementById("formDaftar").addEventListener("submit", function(event){
+    event.preventDefault();
+
+    document.getElementById("successMessage").style.display = "block";
+});
+</script>
+
+</body>
+</html>
