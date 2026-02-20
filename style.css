@@ -10,23 +10,23 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    color: #333;
+    color: #ffffff;
     line-height: 1.6;
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
 
-    /* Premium gradient background */
+    /* Blue Gradient Background */
     background: linear-gradient(
         135deg,
-        #dcdcdc 0%,
-        #f5f5f5 40%,
-        #e0e0e0 70%,
-        #cfcfcf 100%
+        #0f2027 0%,      /* biru sangat gelap */
+        #203a43 30%,     /* biru dongker */
+        #2c5364 60%,     /* biru transisi */
+        #4facfe 100%     /* biru langit */
     );
 }
 
-/* Soft glowing background circles */
+/* Glow effect agar terlihat modern */
 body::before,
 body::after {
     content: "";
@@ -36,17 +36,17 @@ body::after {
     border-radius: 50%;
     z-index: -1;
     filter: blur(120px);
-    opacity: 0.4;
+    opacity: 0.3;
 }
 
 body::before {
-    background: #ffffff;
+    background: #4facfe; /* biru langit glow */
     top: -150px;
     left: -150px;
 }
 
 body::after {
-    background: #c0c0c0;
+    background: #1f3c88; /* biru dongker glow */
     bottom: -150px;
     right: -150px;
 }
@@ -57,17 +57,20 @@ body::after {
 =================================*/
 
 header {
-    background: linear-gradient(to right, #c0c0c0, #e6e6e6);
+    background: linear-gradient(to right, #0f2027, #203a43, #4facfe);
     padding: 20px 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* pindah ke kanan */
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    gap: 50px; /* jarak antar logo & menu */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .logo {
+    margin-right: auto; /* dorong menu ke kanan */
     font-size: 24px;
     font-weight: bold;
+    color: white;
 }
 
 nav {
@@ -82,17 +85,15 @@ nav ul {
     gap: 25px;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #444;
-    font-weight: 500;
-    transition: 0.3s;
+nav ul li a,
+.login-btn {
+    color: white;
 }
 
 nav ul li a:hover,
-nav ul li a.active {
-    color: #000;
-    border-bottom: 2px solid silver;
+nav ul li a.active,
+.login-btn:hover {
+    color: #4facfe;
 }
 
 /* Login Button */
@@ -116,16 +117,14 @@ nav ul li a.active {
     padding: 100px 20px 80px;
 }
 
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
+.hero h1,
+.hero p,
+.video-section h2 {
+    color: #ffffff;
 }
 
-.hero p {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 18px;
-    color: #555;
+.contact-card {
+    background: rgba(255, 255, 255, 0.95);
 }
 
 .btn {
