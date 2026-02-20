@@ -9,6 +9,8 @@
 }
 
 body {
+    padding-top: 100px; /* supaya hero tidak ketutup */
+}
     font-family: 'Segoe UI', sans-serif;
     color: #ffffff;
     line-height: 1.6;
@@ -57,12 +59,21 @@ body::after {
 =================================*/
 
 header {
+    position: fixed;        /* supaya menempel di atas */
+    top: 0;
+    right: 0;
+    width: 100%;
+    
     background: linear-gradient(to right, #0f2027, #203a43, #4facfe);
-    padding: 20px 60px;
+    
     display: flex;
-    justify-content: flex-end; /* pindah semua ke kanan */
+    justify-content: flex-end;   /* semua ke kanan */
     align-items: center;
     gap: 40px;
+
+    padding: 20px 60px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
 }
 
 .logo {
