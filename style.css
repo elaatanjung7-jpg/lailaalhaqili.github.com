@@ -10,9 +10,46 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #dcdcdc, #f5f5f5);
     color: #333;
     line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+
+    /* Premium gradient background */
+    background: linear-gradient(
+        135deg,
+        #dcdcdc 0%,
+        #f5f5f5 40%,
+        #e0e0e0 70%,
+        #cfcfcf 100%
+    );
+}
+
+/* Soft glowing background circles */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(120px);
+    opacity: 0.4;
+}
+
+body::before {
+    background: #ffffff;
+    top: -150px;
+    left: -150px;
+}
+
+body::after {
+    background: #c0c0c0;
+    bottom: -150px;
+    right: -150px;
+}
 }
 
 /* ===============================
