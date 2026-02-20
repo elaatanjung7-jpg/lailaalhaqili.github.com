@@ -36,7 +36,28 @@
         untuk masa depan yang lebih cerdas dan berkelas.
     </p>
     <a href="cv.html" class="btn">Lihat Curriculum Vitae</a>
+<section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Silakan kirim pesan atau pertanyaan Anda kepada kami.</p>
+
+    <form id="contactForm">
+        <input type="text" placeholder="Nama Lengkap" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Pesan Anda..." required></textarea>
+        <button type="submit">Kirim Pesan</button>
+    </form>
+
+    <div class="contact-success" id="contactSuccess">
+        Pesan berhasil dikirim ✔
+    </div>
 </section>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event){
+    event.preventDefault();
+    document.getElementById("contactSuccess").style.display = "block";
+});
+</script>
 
 <section class="video-section">
     <h2>Video Profil</h2>
