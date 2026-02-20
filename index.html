@@ -7,18 +7,13 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
 <header>
-    <div style="position:absolute; top:20px; right:30px;">
-    <a href="login.html" style="text-decoration:none; color:black; font-weight:bold;">
-        <i class="fa fa-user"></i> Login
-    </a>
-</div>
     <div class="logo">Laila Library</div>
+
     <nav>
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
@@ -26,6 +21,10 @@
             <li><a href="#">Koleksi</a></li>
             <li><a href="#">Berita</a></li>
         </ul>
+
+        <a href="login.html" class="login-btn">
+            <i class="fa fa-user"></i> Login
+        </a>
     </nav>
 </header>
 
@@ -36,35 +35,31 @@
         untuk masa depan yang lebih cerdas dan berkelas.
     </p>
     <a href="cv.html" class="btn">Lihat Curriculum Vitae</a>
-<section class="contact-section">
-    <h2>Contact Us</h2>
-    <p>Silakan kirim pesan atau pertanyaan Anda kepada kami.</p>
-
-    <form id="contactForm">
-        <input type="text" placeholder="Nama Lengkap" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Pesan Anda..." required></textarea>
-        <button type="submit">Kirim Pesan</button>
-    </form>
-
-    <div class="contact-success" id="contactSuccess">
-        Pesan berhasil dikirim ✔
-    </div>
 </section>
 
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(event){
-    event.preventDefault();
-    document.getElementById("contactSuccess").style.display = "block";
-});
-</script>
+<section class="contact-section">
+    <div class="contact-card">
+        <h2>Contact Us</h2>
+        <p>Silakan kirim pesan atau pertanyaan Anda kepada kami.</p>
+
+        <form id="contactForm">
+            <input type="text" placeholder="Nama Lengkap" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Pesan Anda..." required></textarea>
+            <button type="submit">Kirim Pesan</button>
+        </form>
+
+        <div class="contact-success" id="contactSuccess">
+            Pesan berhasil dikirim ✔
+        </div>
+    </div>
+</section>
 
 <section class="video-section">
     <h2>Video Profil</h2>
     <div class="video-container">
         <iframe 
             src="https://www.youtube.com/embed/ACvIWSK-DwM" 
-            title="YouTube video player" 
             frameborder="0" 
             allowfullscreen>
         </iframe>
@@ -73,13 +68,19 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 
 <footer>
     <div class="contact">
-        <a href="https://www.instagram.com/laila_alhaqilia_12?igsh=cGRseTZhcXJ1MjZu" target="_blank">Instagram</a>
+        <a href="https://www.instagram.com/laila_alhaqilia_12" target="_blank">Instagram</a>
         <a href="https://wa.me/62895404917176" target="_blank">WhatsApp</a>
         <a href="mailto:lailaalhaqilia@gmail.com">Email</a>
     </div>
     <p>© 2026 Laila Library. All Rights Reserved.</p>
 </footer>
 
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event){
+    event.preventDefault();
+    document.getElementById("contactSuccess").style.display = "block";
+});
+</script>
+
 </body>
 </html>
-
