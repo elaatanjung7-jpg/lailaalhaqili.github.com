@@ -60,14 +60,12 @@ header {
     background: linear-gradient(to right, #0f2027, #203a43, #4facfe);
     padding: 20px 60px;
     display: flex;
-    justify-content: flex-end; /* pindah ke kanan */
+    justify-content: flex-end; /* pindah semua ke kanan */
     align-items: center;
-    gap: 50px; /* jarak antar logo & menu */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    gap: 40px;
 }
 
 .logo {
-    margin-right: auto; /* dorong menu ke kanan */
     font-size: 24px;
     font-weight: bold;
     color: white;
@@ -83,15 +81,17 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 25px;
+    margin: 0;
 }
 
 nav ul li a,
 .login-btn {
     color: white;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 nav ul li a:hover,
-nav ul li a.active,
 .login-btn:hover {
     color: #4facfe;
 }
