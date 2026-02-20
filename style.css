@@ -59,21 +59,12 @@ body::after {
 =================================*/
 
 header {
-    position: fixed;        /* supaya menempel di atas */
-    top: 0;
-    right: 0;
-    width: 100%;
-    
     background: linear-gradient(to right, #0f2027, #203a43, #4facfe);
-    
+    padding: 20px 60px;
     display: flex;
-    justify-content: flex-end;   /* semua ke kanan */
+    justify-content: flex-start; /* posisi ke kiri */
     align-items: center;
     gap: 40px;
-
-    padding: 20px 60px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    z-index: 1000;
 }
 
 .logo {
@@ -93,6 +84,7 @@ nav ul {
     display: flex;
     gap: 25px;
     margin: 0;
+    padding: 0;
 }
 
 nav ul li a,
