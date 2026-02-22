@@ -1,270 +1,201 @@
-/* ===============================
-   GLOBAL STYLE - LAILA LIBRARY
-=================================*/
-
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
+/* ================= BODY ================= */
 body {
-    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    background-attachment: fixed;
     color: #ffffff;
     line-height: 1.6;
-    min-height: 100vh;
-    position: relative;
-    overflow-x: hidden;
-
-    /* Blue Gradient Background */
-    background: linear-gradient(
-        135deg,
-        #0f2027 0%,      /* biru sangat gelap */
-        #203a43 30%,     /* biru dongker */
-        #2c5364 60%,     /* biru transisi */
-        #4facfe 100%     /* biru langit */
-    );
 }
 
-/* Glow effect agar terlihat modern */
-body::before,
-body::after {
-    content: "";
-    position: fixed;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    z-index: -1;
-    filter: blur(120px);
-    opacity: 0.3;
-}
-
-body::before {
-    background: #4facfe; /* biru langit glow */
-    top: -150px;
-    left: -150px;
-}
-
-body::after {
-    background: #1f3c88; /* biru dongker glow */
-    bottom: -150px;
-    right: -150px;
-}
-
-/* ===============================
-   HEADER
-=================================*/
-
+/* ================= HEADER ================= */
 header {
-    background: linear-gradient(to right, #0f2027, #203a43, #4facfe);
-    padding: 20px 60px;
-    display: flex;
-    justify-content: flex-start; /* posisi ke kiri */
-    align-items: center;
-    gap: 40px;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li a,
-.login-btn {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-nav ul li a:hover,
-.login-btn:hover {
-    color: #4facfe;
-}
-
-/* Login Button */
-.login-btn {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.login-btn:hover {
-    color: #000;
-}
-
-/* ===============================
-   HERO SECTION
-=================================*/
-
-.hero {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    padding: 25px 20px;
     text-align: center;
-    padding: 100px 20px 80px;
 }
 
-.hero h1,
-.hero p,
-.video-section h2 {
-    color: #ffffff;
+header h1 {
+    font-size: 2.3rem;
+    font-weight: 700;
 }
 
-.contact-card {
-    background: rgba(255, 255, 255, 0.95);
+header p {
+    margin-top: 8px;
+    font-weight: 300;
+    opacity: 0.9;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 12px 30px;
-    background: silver;
-    color: black;
+/* ================= NAVBAR ================= */
+nav {
+    background: #ffffff;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+nav a {
     text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
+    margin: 0 20px;
+    color: #764ba2;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff9800;
+}
+
+/* ================= SECTION ================= */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* ================= CARD ================= */
+.card {
+    background: #ffffff;
+    color: #333;
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 1.2s ease-in-out;
     transition: 0.3s;
 }
 
-.btn:hover {
-    background: #bfbfbf;
+.card:hover {
+    transform: translateY(-5px);
 }
 
-/* ===============================
-   CONTACT SECTION
-=================================*/
-
-.contact-section {
-    padding: 80px 20px;
-    display: flex;
-    justify-content: center;
+.card h2 {
+    margin-bottom: 20px;
+    color: #764ba2;
 }
 
-.contact-card {
-    background: white;
+/* ================= SOCIAL BUTTON ================= */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    transition: 0.3s;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #feda75, #d62976, #962fbf);
+}
+
+.youtube {
+    background: #ff0000;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+/* ================= IFRAME ================= */
+iframe {
+    margin-top: 30px;
     width: 100%;
     max-width: 600px;
-    padding: 50px;
+    height: 350px;
+    border-radius: 15px;
+    border: none;
+}
+
+/* ================= FORM ================= */
+.form-container {
+    max-width: 420px;
+    margin: 100px auto;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     text-align: center;
 }
 
-.contact-card h2 {
-    margin-bottom: 10px;
-}
-
-.contact-card p {
+.form-container h2 {
     margin-bottom: 25px;
-    color: #666;
 }
 
-.contact-card input,
-.contact-card textarea {
+.form-container input,
+.form-container textarea {
     width: 100%;
-    padding: 14px;
-    margin-bottom: 18px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
 }
 
-.contact-card textarea {
-    height: 130px;
+.form-container textarea {
+    height: 120px;
     resize: none;
 }
 
-.contact-card button {
-    width: 100%;
-    padding: 14px;
-    background: linear-gradient(to right, #c0c0c0, #d9d9d9);
-    border: none;
+.btn-form {
+    background: #ff9800;
+    color: white;
+    padding: 12px;
     border-radius: 30px;
-    font-weight: bold;
+    border: none;
+    width: 100%;
+    font-weight: 600;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-.contact-success {
-    margin-top: 15px;
-    color: green;
-    font-weight: bold;
-    display: none;
+.btn-form:hover {
+    transform: scale(1.05);
 }
 
-/* ===============================
-   VIDEO SECTION
-=================================*/
-
-.video-section {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.video-container iframe {
-    width: 80%;
-    max-width: 800px;
-    height: 400px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* ===============================
-   FOOTER
-=================================*/
-
+/* ================= FOOTER ================= */
 footer {
-    background: #c0c0c0;
     text-align: center;
-    padding: 25px;
-    margin-top: 50px;
+    padding: 20px;
+    background: rgba(0,0,0,0.6);
+    margin-top: 40px;
+    color: white;
 }
 
-footer .contact {
-    margin-bottom: 10px;
+/* ================= ANIMATION ================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-footer .contact a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333;
-}
-
-footer .contact a:hover {
-    color: black;
-}
-
-/* ===============================
-   RESPONSIVE
-=================================*/
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
+/* ================= RESPONSIVE ================= */
+@media(max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
     }
 
-    nav {
-        flex-direction: column;
+    nav a {
+        margin: 0 10px;
     }
 
-    .hero h1 {
-        font-size: 30px;
-    }
-
-    .video-container iframe {
-        width: 100%;
+    iframe {
         height: 250px;
     }
 }
