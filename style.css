@@ -186,16 +186,13 @@ footer {
 }
 
 /* ================= RESPONSIVE ================= */
-@media(max-width: 768px) {
-    header h1 {
-        font-size: 1.8rem;
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
     }
 
-    nav a {
-        margin: 0 10px;
-    }
-
-    iframe {
-        height: 250px;
+    nav {
+        flex-direction: column;
     }
 }
