@@ -81,6 +81,10 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     document.getElementById("contactSuccess").style.display = "block";
 });
 </script>
-
+<script>
+if (!localStorage.getItem("isLoggedIn")) {
+    window.location.href = "login.html";
+}
+</script>
 </body>
 </html>
