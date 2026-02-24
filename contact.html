@@ -2,27 +2,36 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Contact Us</title>
+<title>Contact Us | Laila Library</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<script src="js/script.js"></script>
+<script>
+    checkLogin();
+</script>
+
 <header>
-    <div class="logo">Perpustakaan Umum Laila</div>
+    <div class="logo">Laila Library</div>
     <nav>
-        <a href="home.html">Home</a>
-        <a href="profil.html">Profil</a>
+        <a href="index.html">Home</a>
+        <a href="cv.html">Profil</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="#" onclick="logout()">Logout</a>
     </nav>
 </header>
 
 <div class="contact-container">
     <h2>Contact Us</h2>
 
-    <input type="text" placeholder="Nama">
-    <input type="email" placeholder="Email">
-    <textarea placeholder="Pesan"></textarea>
+    <form onsubmit="event.preventDefault(); kirimPesan();">
+        <input type="email" id="emailContact" placeholder="Email" required>
+        <input type="text" id="phoneContact" placeholder="No Handphone" required>
+        <textarea id="pesan" placeholder="Pesan" required></textarea>
 
-    <button>KIRIM</button>
+        <button type="submit" class="btn-contact">Kirim</button>
+    </form>
 </div>
 
 </body>
