@@ -1,54 +1,93 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>Profil | Perpustakaan Umum Laila</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Curriculum Vitae - Laila</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <script src="js/script.js"></script>
+<script>
+    checkLogin();
+</script>
+    
 <header>
-    <div class="logo">Perpustakaan Umum Laila</div>
+    <div class="logo">Laila Library</div>
     <nav>
-        <a href="home.html">Home</a>
-        <a href="profil.html">Profil</a>
+        <a href="index.html">Home</a>
+        <a href="cv.html">Profil</a>
+        <a href="#">Layanan</a>
+        <a href="#">Koleksi</a>
+        <a href="#">Berita</a>
         <a href="contact.html">Contact Us</a>
+<a href="#" onclick="logout()">Logout</a>
     </nav>
 </header>
 
-<div class="cv-container">
-    <img src="poto profil laila.jpeg" class="profile-img">
+<section class="cv">
+    <h1>Curriculum Vitae</h1>
 
-    <h2>PENGELOLA PERPUSTAKAAN</h2>
-    <p><b>Nama:</b> Laila Al-Haqilia Tanjung</p>
-    <p><b>Tempat, Tanggal Lahir:</b> Sitiris-Tiris, 12 Desember 2005</p>
-    <p><b>Jenis Kelamin:</b> Perempuan</p>
-    <p><b>Asal Sekolah:</b> MAN 1 Tapteng</p>
-    <p><b>Alamat:</b> Jalan Pembangunan No36A Helvetia Timur</p>
+    <!-- PROFIL -->
+    <section class="card">
+        <img src="poto profil laila.jpeg" class="profil-img">
 
-    <h3>Pendidikan</h3>
-    <p>S-1 Perpustakaan dan Sains Informasi</p>
-    <p>Universitas Sumatera Utara</p>
+        <h2><b>Pengelola Perpustakaan</b></h2>
 
-    <h3>Pengalaman</h3>
-    <p>Mengembangkan platform perpustakaan digital</p>
-    <p>Mengelola bahan pustaka</p>
+        <ul>
+            <li><b>Nama:</b> Laila Al-Haqilia Tanjung</li>
+            <li><b>Tempat, Tanggal Lahir:</b> Sitiris-Tiris, 12 Desember 2005</li>
+            <li><b>Jenis Kelamin:</b> Perempuan</li>
+            <li><b>Asal Sekolah:</b> MAN 1 Tapteng</li>
+            <li><b>Alamat:</b> Jalan Pembangunan No 36A Helvetia Timur</li>
+        </ul>
+    </section>
 
-    <h3>Organisasi</h3>
-    <p>Anggota Organisasi LPTQ</p>
-    <p>Anggota Organisasi IMM Sosial Humaniora (Soshum) USU</p>
+    <!-- PENDIDIKAN -->
+    <section class="card">
+        <h2>Pendidikan</h2>
+        <p><b>Universitas Sumatera Utara</b></p>
+        <p>S1 Perpustakaan dan Sains Informasi</p>
+    </section>
 
-    <h3>Kontak</h3>
-    <a href="https://www.instagram.com/laila_alhaqilia_12" target="_blank">Instagram</a><br>
-    <a href="https://wa.me/62895404917176" target="_blank">WhatsApp</a><br>
-    <a href="mailto:lailaalhaqilia@gmail.com">Email</a>
+    <!-- PENGALAMAN -->
+    <section class="card">
+        <h2>Pengalaman</h2>
+        <ul>
+            <li>Mengembangkan platform perpustakaan digital</li>
+            <li>Mengelola bahan pustaka</li>
+        </ul>
+    </section>
 
-    <h3>Video</h3>
-    <iframe width="100%" height="400"
-        src="https://www.youtube.com/embed/ACvIWSK-DwM"
-        frameborder="0" allowfullscreen>
-    </iframe>
-</div>
+<!-- PENGALAMAN ORGANISASI-->
+    <section class="card">
+        <h2>Organisasi</h2>
+        <ul>
+            <li>Anggota Organisasi LPTQ</li>
+            <li>Anggota Organisasi IMM Sosial Humaniora (Soshum) USU</li>
+        </ul>
+    </section>
+    
+    <!-- KONTAK -->
+    <section class="card">
+        <a href="https://www.instagram.com/laila_alhaqilia_12" target="_blank" class="btn">Instagram</a>
+        <a href="https://wa.me/62895404917176" target="_blank" class="btn">WhatsApp</a>
+        <a href="mailto:lailaalhaqilia@gmail.com" class="btn">Email</a>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="card">
+        <h2>Video Favorit</h2>
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/ACvIWSK-DwM"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+</section>
 
 </body>
 </html>
