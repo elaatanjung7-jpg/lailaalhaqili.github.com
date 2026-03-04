@@ -1,63 +1,29 @@
-// ================= REGISTER =================
-function register() {
-    const firstName = document.getElementById("regFirstName").value;
-    const lastName = document.getElementById("regLastName").value;
-    const phone = document.getElementById("regPhone").value;
-    const email = document.getElementById("regEmail").value;
-    const password = document.getElementById("regPassword").value;
+// LOGIN FUNCTION
+function login(event) {
+    event.preventDefault();
 
-    if (!firstName || !lastName || !phone || !email || !password) {
-        alert("Harap isi semua data!");
-        return;
-    }
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
-    localStorage.setItem("firstName", firstName);
-    localStorage.setItem("lastName", lastName);
-    localStorage.setItem("password", password);
-    localStorage.setItem("isLogin", "true");
-
-    alert("Pendaftaran berhasil!");
-    window.location.href = "index.html";
-}
-
-// ================= LOGIN =================
-function login() {
-    const firstName = document.getElementById("loginFirstName").value;
-    const lastName = document.getElementById("loginLastName").value;
-    const password = document.getElementById("loginPassword").value;
-
-    if (
-        firstName === localStorage.getItem("firstName") &&
-        lastName === localStorage.getItem("lastName") &&
-        password === localStorage.getItem("password")
-    ) {
-        localStorage.setItem("isLogin", "true");
+    // Username & password sederhana (bisa kamu ganti)
+    if (username === "admin" && password === "1234") {
+        localStorage.setItem("isLoggedIn", "true");
+        alert("Login berhasil!");
         window.location.href = "index.html";
     } else {
-        alert("Data login salah!");
+        alert("Username atau password salah!");
     }
 }
 
-// ================= CEK LOGIN =================
+// CHECK LOGIN (dipakai di halaman utama)
 function checkLogin() {
-    if (localStorage.getItem("isLogin") !== "true") {
+    if (localStorage.getItem("isLoggedIn") !== "true") {
         window.location.href = "login.html";
     }
 }
 
-// ================= LOGOUT =================
+// LOGOUT
 function logout() {
-    localStorage.removeItem("isLogin");
+    localStorage.removeItem("isLoggedIn");
     window.location.href = "login.html";
-}
-
-// ================= TOGGLE =================
-function showRegister() {
-    document.getElementById("loginForm").classList.add("hidden");
-    document.getElementById("registerForm").classList.remove("hidden");
-}
-
-function showLogin() {
-    document.getElementById("registerForm").classList.add("hidden");
-    document.getElementById("loginForm").classList.remove("hidden");
 }
