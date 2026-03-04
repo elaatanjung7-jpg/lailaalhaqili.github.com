@@ -14,7 +14,28 @@ function login(event) {
         alert("Username atau password salah!");
     }
 }
+// REGISTER MEMBER
+function registerMember(event) {
+    event.preventDefault();
 
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+
+    // Simpan data sementara di localStorage
+    const memberData = {
+        firstName,
+        lastName,
+        email,
+        phone
+    };
+
+    localStorage.setItem("memberData", JSON.stringify(memberData));
+
+    alert("Pendaftaran berhasil! Silakan login.");
+    window.location.href = "login.html";
+}
 // CHECK LOGIN (dipakai di halaman utama)
 function checkLogin() {
     if (localStorage.getItem("isLoggedIn") !== "true") {
