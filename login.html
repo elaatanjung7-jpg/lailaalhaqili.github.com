@@ -2,24 +2,30 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Login - lentera barusku</title>
+    <title>Daftar Anggota - lentera barusku</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="login-body">
+<body class="register-body">
 
-<div class="login-container">
-    <h2>Login Anggota</h2>
-    <p>Silakan masuk untuk mengakses layanan perpustakaan</p>
+<div class="register-container">
+    <h2>Pendaftaran Anggota</h2>
+    <p>Silakan lengkapi data diri Anda untuk menjadi anggota perpustakaan</p>
 
-    <form onsubmit="login(event)">
-        <input type="text" id="username" placeholder="Username" required>
-        <input type="password" id="password" placeholder="Password" required>
-        <button type="submit" class="btn-login">Login</button>
+    <form onsubmit="registerMember(event)">
+        <div class="input-group">
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" placeholder="Last Name" required>
+        </div>
+
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="tel" id="phone" placeholder="No. Handphone" required>
+
+        <button type="submit" class="btn-register">Daftar Sekarang</button>
     </form>
 
-    <p class="back-home">
-        <a href="index.html">← Kembali ke Beranda</a>
+    <p class="back-login">
+        Sudah punya akun? <a href="login.html">Login di sini</a>
     </p>
 </div>
 
