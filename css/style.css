@@ -220,7 +220,7 @@ footer {
 }
 
 /* ================= RESPONSIVE ================= */
-@media(max-width: 768px){
+@media(max-width: 76px){
     header {
         flex-direction: column;
         padding: 15px;
