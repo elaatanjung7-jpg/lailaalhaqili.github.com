@@ -6,9 +6,70 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
-    color: white;
     overflow-x: hidden;
+    color: white;
+}
+
+/* ================= HERO BACKGROUND ================= */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+
+    /* Background pantai + gradasi sunset */
+    background:
+    linear-gradient(rgba(0,70,120,0.5), rgba(255,180,0,0.4)),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e")
+    no-repeat center center/cover;
+}
+
+/* Motif adat transparan */
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
+    opacity: 0.15;
+}
+
+/* Teks hero */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+/* Tombol */
+.btn {
+    background: #ffd700;
+    color: #003049;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
 }
 
 /* ================= NAVBAR ================= */
@@ -19,8 +80,8 @@ header {
     padding: 20px 60px;
     position: fixed;
     width: 100%;
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(8px);
     z-index: 1000;
 }
 
@@ -40,122 +101,9 @@ nav a:hover {
     color: #ffd700;
 }
 
-/* ================= HERO ================= */
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    padding: 20px;
-}
-
-.hero-content {
-    z-index: 2;
-}
-
-.hero h1 {
-    font-size: 50px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.btn {
-    background: #ffd700;
-    color: #003049;
-    padding: 14px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: white;
-}
-
-/* ================= OMBAK ================= */
-.waves {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    line-height: 0;
-}
-
-.waves svg {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 150px;
-}
-
-.wave1 { animation: moveWave 8s linear infinite; }
-.wave2 { animation: moveWave 10s linear infinite; }
-.wave3 { animation: moveWave 12s linear infinite; }
-
-@keyframes moveWave {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-/* ================= WISATA SECTION ================= */
-.wisata {
-    padding: 100px 60px;
-    text-align: center;
-    background: #f4f4f4;
-    color: #333;
-}
-
-.wisata h2 {
-    font-size: 36px;
-    margin-bottom: 50px;
-}
-
-.card-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    width: 300px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
 /* ================= FOOTER ================= */
 footer {
     text-align: center;
     padding: 30px;
     background: #0f2027;
-}
-
-/* ================= RESPONSIVE ================= */
-@media(max-width: 768px){
-    header {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .card-container {
-        flex-direction: column;
-        align-items: center;
-    }
 }
