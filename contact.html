@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Contact Us |lentera Barusku</title>
+<title>Contact</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,31 +13,18 @@
 </script>
 
 <header>
-    <div class="logo">lentera Barusku</div>
     <nav>
         <a href="index.html">Home</a>
         <a href="cv.html">Profil</a>
-        <a href="contact.html">Contact Us</a>
         <a href="#" onclick="logout()">Logout</a>
     </nav>
 </header>
 
-<div class="contact-container">
-    <h2>Contact Us</h2>
-
-    <form onsubmit="event.preventDefault(); kirimPesan();">
-        <input type="email" id="emailContact" placeholder="Email" required>
-        <input type="text" id="phoneContact" placeholder="No Handphone" required>
-        <textarea id="pesan" placeholder="Pesan" required></textarea>
-
-        <button type="submit" class="btn-contact">Kirim</button>
-    </form>
-</div>
+<form onsubmit="event.preventDefault(); kirimPesan();">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Pesan"></textarea>
+    <button>Kirim</button>
+</form>
 
 </body>
 </html>
-<section class="wisata">
-    <h2>Hubungi Kami</h2>
-    <p>Email: lentera@gmail.com</p>
-    <p>WhatsApp: 08xxxxxxxxxx</p>
-</section>
