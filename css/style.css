@@ -186,3 +186,31 @@ footer {
 .tentang ul {
     margin-left: 20px;
 }
+/* HERO KHUSUS TENTANG */
+.tentang-hero {
+    background:
+    linear-gradient(rgba(0,70,120,0.6), rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e")
+    no-repeat center center/cover;
+}
+
+/* SECTION TENTANG */
+.tentang {
+    padding: 80px 20px;
+    background: #f9f9f9;
+    color: #333;
+}
+
+.tentang .container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.tentang h2 {
+    margin-top: 40px;
+    color: #003049;
+}
+
+.tentang p, .tentang ul {
+    line-height: 1.8;
+}
