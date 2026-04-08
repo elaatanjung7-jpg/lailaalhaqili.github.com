@@ -107,3 +107,39 @@ footer {
     padding: 30px;
     background: #0f2027;
 }
+/* DROPDOWN MENU */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: rgba(0,0,0,0.85);
+    min-width: 160px;
+    border-radius: 8px;
+    overflow: hidden;
+    top: 35px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    margin: 0;
+    color: white;
+}
+
+.dropdown-content a:hover {
+    background: #ffd700;
+    color: #003049;
+}
+
+/* SHOW DROPDOWN */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
