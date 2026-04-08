@@ -1,28 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Lentera Barusku</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR WISATA -->
 <header>
     <div class="logo">🌿 Lentera Barusku</div>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="tentang.html">Tentang</a>
+        
+    <nav>
+    <a href="#">Home</a>
+    <a href="#">Tentang</a>
 
-        <div class="dropdown">
-            <a href="#">Wisata ▾</a>
-            <div class="dropdown-content">
-                <a href="#">Pantai</a>
-                <a href="#">Gunung</a>
-                <a href="#">Danau</a>
-            </div>
+    <!-- DROPDOWN -->
+    <div class="dropdown">
+        <a href="#">Wisata ▾</a>
+        <div class="dropdown-content">
+            <a href="#">Pantai</a>
+            <a href="#">Gunung</a>
+            <a href="#">Danau</a>
         </div>
+    </div>
 
-        <a href="budaya.html">Budaya</a>
-        <a href="galeri.html">Galeri</a>
-        <a href="contact.html">Kontak</a>
-        <a href="#" onclick="logout()">Logout</a>
-    </nav>
+    <a href="#">Budaya</a>
+    <a href="#">Galeri</a>
+    <a href="#">Kontak</a>
+</nav>
 </header>
-<section class="wisata">
-    <h2>Selamat Datang</h2>
-    <p>
-        Website ini menyajikan informasi lengkap mengenai wisata, budaya, 
-        dan keindahan alam yang ada di daerah Barus.
-    </p>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Selamat Datang di Website Lentera Barusku</h1>
+        <p>Nikmati keindahan pantai yang asri berpadu dengan adat dan tradisi yang lestari</p>
+        <a href="#" class="btn">Jelajahi Sekarang</a>
+    </div>
+
+    <!-- ANIMASI OMBAK -->
+    <div class="waves">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22,103.59,29,158,17C230,47,284,5,339,1s104,32,158,45c54,13,108-4,162-19,54-15,108-28,162-14s108,46,162,58c54,12,108,2,162-12V0Z" opacity=".25" class="wave1"></path>
+            <path d="M0,0V15.81C47.79,27,103.59,42,158,40c72-3,136-52,211-53s146,45,219,49c73,4,146-32,219-43,73-11,146-3,219,18V0Z" opacity=".5" class="wave2"></path>
+            <path d="M0,0V5.63C47.79,17,103.59,34,158,32c72-3,136-52,211-53s146,45,219,49c73,4,146-32,219-43,73-11,146-3,219,18V0Z" class="wave3"></path>
+        </svg>
+    </div>
 </section>
+
+<!-- SECTION WISATA -->
+<section class="wisata">
+    <h2>Destinasi Unggulan</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Pantai Eksotis</h3>
+            <p>Hamparan pasir putih dan laut biru yang menenangkan jiwa.</p>
+        </div>
+        <div class="card">
+            <h3>Festival Adat</h3>
+            <p>Tradisi budaya turun-temurun yang penuh makna dan kearifan lokal.</p>
+        </div>
+        <div class="card">
+            <h3>Kerajinan Lokal</h3>
+            <p>Produk handmade khas desa dengan sentuhan budaya autentik.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Lentera Barusku| Wisata Alam & Budaya</p>
+</footer>
+
+</body>
+</html>
